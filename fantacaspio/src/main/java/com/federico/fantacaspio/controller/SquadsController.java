@@ -39,6 +39,13 @@ public class SquadsController {
 
     }
 
+    @PostMapping("/add-credits/{id}")
+    public ResponseEntity<String> addCredits(@RequestParam(name = "credits") int crediti,@PathVariable int id){
+        squadsService.addCredits(id, crediti);
+
+        return ResponseEntity.ok("aggiunti i crediti");
+    }
+
     @DeleteMapping("/delete-team/{id}")
     public ResponseEntity<?> deleteSquad(@PathVariable Long id) {
         try {

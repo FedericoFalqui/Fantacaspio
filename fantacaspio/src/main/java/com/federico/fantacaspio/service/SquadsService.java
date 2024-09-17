@@ -42,4 +42,10 @@ public class SquadsService {
     public void deleteTeam(Long id) {
         repository.deleteById(id);
     }
+
+    public void addCredits(int id, int crediti) {
+        Squad s = repository.findById(id);
+
+        s.setCredits(s.getCredits() + crediti);
+    }
 }

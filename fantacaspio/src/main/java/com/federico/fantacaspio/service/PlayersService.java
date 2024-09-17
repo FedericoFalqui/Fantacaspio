@@ -52,6 +52,7 @@ public class PlayersService {
         return lista;
     }
 
+
     public List<Player> findBySquad(String squad) {
         return repository.findPlayersBySquad(squad);
     }
